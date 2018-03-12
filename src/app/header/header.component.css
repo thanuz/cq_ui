@@ -1,0 +1,37 @@
+.i-header{
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  padding:0 4em;
+  align-items: baseline;
+  border-bottom: 1px solid #F05F40;
+}
+.i-header h1 a{
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #F05F40;
+}
+.i-navigation-container{
+  flex:1;
+}
+.i-navigation-container ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.i-navigation-container ul li{
+  padding:0.2em  1em;
+}
+.i-navigation-container ul li a{
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.i-navigation-container ul li a:hover{
+  color: #F05F40;
+  transition: color 0.2s;
+}

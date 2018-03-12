@@ -1,0 +1,12 @@
+<div class="i-header">
+  <h1>
+    <a [routerLink]="['/home']">Interview pulse</a>
+  </h1>
+  <div class="i-navigation-container">
+    <ul class="i-navigation">
+      <li *ngFor="let navigationitem of navigationItems">
+        <a href="#">{{navigationitem.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
