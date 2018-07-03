@@ -1,0 +1,127 @@
+.from-error {
+  color: red;
+  position: absolute;
+  right: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08rem;
+  bottom: -1rem;
+}
+
+.signupForm-div {
+  background: rgba(11, 30, 44, 0.5);
+  display: grid;
+  height: 100%;
+  overflow: scroll;
+  grid-template-columns: auto 25rem auto;
+  grid-template-rows: 15% auto 15%;
+}
+
+.signupForm {
+  background: rgba(11, 30, 44, 0.8);
+  padding: 2rem;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  box-shadow: 0 2px 4px rgba(11, 30, 44, 1);
+  border-radius: 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button:focus {
+  outline: none
+}
+
+
+
+button {
+  border: none;
+  background: white;
+  color: rgba(11, 30, 44, 1);
+  width: 8.5rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+button.active {
+  color: rgba(11, 30, 44, 1);
+  background: rgba(60, 200, 200, 1);
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.active:before {
+  content: "\2713";
+  padding-right: 0.3rem;
+}
+
+.form-element {
+  position: relative;
+}
+
+.form-element input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 0 0;
+  margin-bottom: 0.3rem;
+  height: 50px;
+  background: transparent;
+  border-bottom: 1px solid rgba(60, 200, 200, 1);
+  color: white;
+  letter-spacing: 0.1rem;
+  border-radius: 0;
+}
+
+.form-element input:focus {
+  border-width: 2px;
+
+}
+
+.form-element input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-footer-btns {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-footer-btns button {
+  height: 2.2rem;
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  width: 6rem;
+}
+
+button.primary {
+  background: #3bc9c870;
+  color: white;
+}
+
+@media (max-width:450px) {
+  .signupForm-div {
+    grid-template-columns: 7% 86% 7%;
+    grid-template-rows: 15% auto 15%;
+  }
+  .signupForm {
+    grid-column: 2 / 3;
+    padding: 2rem 1rem;
+  }
+  button {
+    width: 7.5rem;
+  }
+}

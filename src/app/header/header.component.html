@@ -1,12 +1,34 @@
 <div class="i-header">
   <h1>
-    <a [routerLink]="['/home']">Interview pulse</a>
+    <a [routerLink]="['/home']">Career
+      <span style="color:var(--color-secondary)">quo</span>
+    </a>
+
   </h1>
   <div class="i-navigation-container">
-    <ul class="i-navigation">
+    <ul class="i-navigation desktopNav">
       <li *ngFor="let navigationitem of navigationItems">
-        <a href="#">{{navigationitem.name}}</a>
+        <a [routerLink]="[navigationitem.routerLink]" [routerLinkActive]="['active']">{{navigationitem.name}}</a>
       </li>
     </ul>
+    <ul class="i-navigation mobileNav">
+      <li>
+        <button (click)="openMenu()" class="mobileNav-link">
+          <i class="fas fa-bars"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="menu-overlay" [ngClass]="{'active':isMenuOpened}">
+    <div class="menu" [ngClass]="{'active':isMenuOpened}">
+      <button (click)="closeMenu()" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li *ngFor="let navigationitem of navigationItems">
+          <a (click)="goto(navigationitem.routerLink)">{{navigationitem.name}}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

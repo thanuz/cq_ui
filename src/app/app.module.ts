@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '../app/header/header.component';
+import { GetStartedModule } from '../app/get_started/get_started.module';
+import { LoginModule } from '../app/login/login.module';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +17,11 @@ import { HeaderComponent } from '../app/header/header.component';
   imports: [
     HomeModule,
     BrowserModule,
+    GetStartedModule,
+    LoginModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' }
-    ])
+    ], { useHash: true })
   ],
   bootstrap: [AppComponent]
 })

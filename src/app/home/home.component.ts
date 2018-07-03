@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.navigationItems = [{ name: 'login'}];
-    this.categories = [{ name: 'Information Technology', imgUrl: '../../assets/images/2.jpg' },
-    { name: 'Finance', imgUrl: '../../assets/images/1.jpg' },
-    { name: 'Marketing', imgUrl: '../../assets/images/3.jpg' },
-    { name: 'Accounting', imgUrl: '../../assets/images/4.jpg' },
-    { name: 'Management', imgUrl: '../../assets/images/5.jpg' },
-    { name: 'Human Resources', imgUrl: '../../assets/images/6.jpg' }];
+    this.categories = [{ name: 'Information Technology', imgUrl: '../../assets/images/it.jpg' },
+    { name: 'Finance', imgUrl: '../../assets/images/finance.jpg' },
+    { name: 'Marketing', imgUrl: '../../assets/images/marketing.jpg' },
+    { name: 'Accounting', imgUrl: '../../assets/images/accounts.jpg' },
+    { name: 'Management', imgUrl: '../../assets/images/management.jpg' },
+    { name: 'Human Resources', imgUrl: '../../assets/images/hr.jpg' }];
   }
 }

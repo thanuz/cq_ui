@@ -1,8 +1,8 @@
  .i-intro-section-container{
-  background: url('../../assets/images/header.jpg');
+  background:linear-gradient(rgba(11,30,44,0.6),rgba(11,30,44,0.5)), url('../../assets/images/header1.jpg');
   background-size: cover;
   background-attachment: fixed;
-  color: white;
+  color:var(--color-tertiary);
 }
 
 .i-intro-section, .i-needed-section, .i-contact-section, .i-working-section{
@@ -12,22 +12,25 @@
   padding-bottom: 5rem;
 }
 .i-intro-section{
-  padding-top: 3rem;
+  padding-top: 7rem;
   padding-bottom: 0;
   min-height: 100vh;
+  text-align: center;
 }
 .i-intro-section h1, .i-needed-section h3, .i-contact-section h3, .i-working-section h3{
   margin: 4rem 0em;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 0;
 }
  .i-rounded-button,  .i-rounded-button-white{
-  background: #F05F40;
-  color: white;
+  background: var(--color-primary);
+  color:var(--color-tertiary);
   padding:  1rem 2rem;
   font-size:16px;
   text-transform: uppercase;
   font-weight: 700;
+  border-radius: 2rem;
+  border:0
 }
 .i-working-steps{
   display: flex;
@@ -44,8 +47,8 @@
 }
 
 .i-rounded-button-white{
-  background: white;
-  color: #F05F40;
+  background:var(--color-tertiary);
+  color:var(--color-primary);
 }
 .i-hr, .i-hr-black, .i-hr-white{
   margin: 2rem;
@@ -56,7 +59,7 @@
   border-color: black;
 }
 .i-hr-white{
-  border-color: white;
+  border-color: var(--color-tertiary);
 }
 
 .i-intro-section div.sub-heading, .i-needed-section div.sub-heading{
@@ -64,8 +67,8 @@
   margin-bottom: 2rem;
 }
 .i-needed-section{
+  background: var(--color-primary-light);
   color: white;
-  background: #F05F40;
 }
 .i-needed-section h3, .i-contact-section h3, .i-working-section h3{
   font-weight: 400;
@@ -76,7 +79,6 @@
 }
 .i-working-section{
   color:black;
-  background-image:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../assets/images/howworks.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -110,7 +112,7 @@
 {
   opacity: 0;
   display: flex;
-  color: white;
+  color: var(--color-tertiary);
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -118,15 +120,16 @@
   left:0;
   height: 100%;
   width: 100%;
-  background: #ee5a3969;
+  background: var(--color-primary-light);
 }
 .category-footer p{
-  background: black;
+  border:1px solid var(--color-tertiary);
+  box-shadow: 0 0 4rem var(--color-tertiary);
+  background: var(--color-primary);
   padding: 1rem;
 }
 .i-contact-section{
-  color: white;
-  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../assets/images/contact.jpg');
+  color:var(--color-primary);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -144,7 +147,7 @@
     text-align: center;
     line-height: 1.7rem;
   }
-  .i-needed-section h3{
+  .i-needed-section h3, .i-working-section h3{
     font-size: 1.6rem;
   }
   .i-needed-section div.sub-heading{
@@ -167,7 +170,7 @@
   {
     opacity: 1;
     display: flex;
-    color: white;
+    color:var(--color-tertiary);
     justify-content: center;
     align-items: center;
     position: absolute;

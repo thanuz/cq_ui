@@ -1,0 +1,21 @@
+<section class="login-section">
+  <form class="login-form" (ngSubmit)="submitForm()" [formGroup]="loginForm">
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div class="form-element">
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <div class="form-footer-btns">
+      <button type="submit" [disabled]="!loginForm.valid" class="primary">Login</button>
+      <button type="button" (click)="clear()">Clear</button>
+    </div>
+    <div style="border: 1px solid  rgba(60, 200, 200, 0.1);margin-top:1rem "></div>
+    <div class="form-footer-links" style="display:flex;justify-content:space-between;padding-top:0.8rem;font-size: 0.8rem ">
+      <a href="#">Forgot Your Password?</a>
+      <a href="#">SignUp</a>
+    </div>
+  </form>
+</section>

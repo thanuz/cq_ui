@@ -1,37 +1,135 @@
-.i-header{
+.i-header {
   position: fixed;
   width: 100%;
-  background: rgba(255,255,255,0.9);
+  background: var(--color-primary);
   z-index: 999;
   display: flex;
   justify-content: space-between;
-  padding:0 4em;
+  padding: 0 4em;
   align-items: baseline;
-  border-bottom: 1px solid #F05F40;
+  border-bottom: 1px solid var(--color-primary);
 }
-.i-header h1 a{
+
+.mobileNav-link {
+  color: white;
+  background: transparent;
+  font-size: 1.4rem;
+  border: 0;
+}
+
+.i-header h1 a {
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #F05F40;
+  color: var(--color-tertiary);
 }
-.i-navigation-container{
-  flex:1;
+
+.i-navigation-container {
+  flex: 1;
 }
-.i-navigation-container ul{
+
+.i-navigation-container ul {
   display: flex;
   justify-content: flex-end;
   list-style: none;
 }
-.i-navigation-container ul li{
-  padding:0.2em  1em;
+
+.i-navigation-container ul.mobileNav {
+  display: none;
 }
-.i-navigation-container ul li a{
-  color: black;
+
+.i-navigation-container ul li {
+  padding: 0.2em 1em;
+}
+
+.i-navigation-container ul li a {
+  color: var(--color-tertiary);
   font-weight: 600;
   text-transform: uppercase;
 }
-.i-navigation-container ul li a:hover{
-  color: #F05F40;
+
+.i-navigation-container ul li a:hover,
+.i-navigation-container ul li a.active {
+  color: var(--color-secondary);
   transition: color 0.2s;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  background: rgba(11, 30, 44, 0.6);
+  transition: 0.3s visibility, opacity, width;
+}
+
+.menu-overlay.active {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-overlay .menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  opacity: 0;
+  background: var(--color-primary);
+  ;
+  transition: 0.3s left, opacity;
+}
+
+.menu-overlay .menu.active {
+  left: 20%;
+  opacity: 1;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu ul li {
+  padding: 0.8rem 2rem;
+}
+
+.menu ul li a {
+  font-size: 1.2rem;
+  color: var(--color-tertiary);
+}
+
+.menu .close-btn {
+  background: transparent;
+  color: white;
+  border: 0;
+  font-size: 1.5rem;
+  margin-top: 0.4rem;
+  margin-left: 0.7rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .i-header {
+    padding: 0 1em;
+    padding-right: 0.5rem;
+  }
+  .i-navigation-container ul.mobileNav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  .i-navigation-container ul.desktopNav {
+    display: none;
+  }
+  .i-navigation-container ul li {
+    padding: 0.2em;
+  }
 }

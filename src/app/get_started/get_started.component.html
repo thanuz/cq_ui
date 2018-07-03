@@ -1,0 +1,45 @@
+<section class="signupForm-div">
+  <form class="signupForm" (ngSubmit)="submitForm()" [formGroup]="userForm">
+    <div class="buttons">
+      <button type="button" [ngClass]="{'active':isUserTypeStudent}" (click)="selectUserType('student')">Student</button>
+      <button type="button" [ngClass]="{'active':!isUserTypeStudent}" (click)="selectUserType('professional')">Professional</button>
+    </div>
+    <div formGroupName="name">
+      <div class="form-element">
+        <input type="text" id="FirstName" formControlName="firstName" placeholder="First Name">
+        <label class="from-error" *ngIf="userForm.get('name').get('firstName').touched||userForm.get('name').get('firstName').dirty">
+            <span *ngIf="userForm.get('name').get('firstName').errors && userForm.get('name').get('firstName').errors.required">
+                Required
+              </span>
+        </label>
+      </div>
+      <div class="form-element">
+        <input type="text" id="LastName" formControlName="lastName" placeholder="Last Name">
+        <label class="from-error" *ngIf="userForm.get('name').get('lastName').touched||userForm.get('name').get('lastName').dirty">
+          <span *ngIf="userForm.get('name').get('lastName').errors && userForm.get('name').get('lastName').errors.required">
+            Required
+          </span>
+        </label>
+      </div>
+    </div>
+    <div class="form-element">
+      <input type="email" id="email" formControlName="email" placeholder="example@gmail.com">
+    </div>
+    <div class="form-element" *ngIf="!isUserTypeStudent">
+      <input type="text" id="company" formControlName="company" placeholder="Company Name">
+    </div>
+    <div class="form-element">
+      <input type="password" id="password" formControlName="password" placeholder="Password">
+    </div>
+    <div class="form-element">
+      <input type="password" id="confirmPassword" placeholder="Confirm password">
+    </div>
+    <div class="form-footer-btns">
+      <button type="submit" [disabled]="!userForm.valid" class="primary">Signup</button>
+      <button type="button" (click)="clear()">Clear</button>
+    </div>
+  </form>
+
+
+
+</section>
